@@ -18,6 +18,7 @@
 
 //universal constants across the entire system
 #define ON 50
+#define OFF 0
 #define MAX 100
 #define FLASHDELAY 1000
 #define FLASH 5000
@@ -30,23 +31,16 @@ int main() {
 		return 1; //return error status (initialization failed)
 	}	
 
-	int r1 = 0;
-	int g = 0;
-	int b = 0;
-	
-	int r2 = 0;
-	int w = 0;
-
 	pinMode(BUTTON1, INPUT);
 	pinMode(BUTTON2, INPUT);
 
 	while (1) {
 		
-		softPwmCreate(RED1, r1, MAX);
-		softPwmCreate(GREEN, g, MAX);
-		softPwmCreate(BLUE, b, MAX);
-		softPwmCreate(RED2, r2, MAX);
-		softPwmCreate(WHITE, w, MAX);
+		softPwmCreate(RED1, ON, MAX);
+		softPwmCreate(GREEN, OFF, MAX);
+		softPwmCreate(BLUE, OFF, MAX);
+		softPwmCreate(RED2, ON, MAX);
+		softPwmCreate(WHITE, OFF, MAX);
 
 		
 
