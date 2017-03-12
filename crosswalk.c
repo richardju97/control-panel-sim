@@ -17,10 +17,11 @@
 #define BUTTON2 27
 
 //universal constants across the entire system
-#define ON 50
+#define ON 5
+#define ONR 50
 #define OFF 0
 #define MAX 100
-#define FLASHDELAY 1000
+#define FLASHDELAY 500
 #define FLASH 5000
 #define WALK 2500
 #define CYCLE 10000
@@ -57,20 +58,42 @@ int main() {
 
 		if ((button1 == LOW || button2 == LOW) && status == 0) {
 			
+			status = 1;	
 			softPwmWrite(RED1, ON);
 			softPwmWrite(GREEN, ON);
 			softPwmWrite(BLUE, ON);
 			softPwmWrite(RED2, OFF);
 			softPwmWrite(WHITE, ON);
 			delay(WALK);
+			status = 2;
 		}
 
+		if (status == 2) {
+			int i;
+
+			softPwmWrite(GREEN, OFF);
+			softPwmWrite(BLUE, OFF);
+			softPwmWrite(WHITE, OFF);
+
+			for (i = 0; i < 10; i++) {
+				if (i % 2 == 0) {
+					softPwmWrite(RED1, ONR);
+					softPwmWrite(RED2, ON);
+					delay(FLASHDELAY);
+				} else {
+					softPwmWrite(RED1, OFF);
+					softPwmWrite(RED2, OFF);
+					delay(FLASHDELAY);
+				}
+			}
+		}
 		//temporarily set back to red for testing
-			softPwmWrite(RED1, ON);
+			softPwmWrite(RED1, ONR);
 			softPwmWrite(GREEN, OFF);
 			softPwmWrite(BLUE, OFF);
 			softPwmWrite(RED2, ON);
 			softPwmWrite(WHITE, OFF);
+			status = 0;
 
 		delay(100);		
 
