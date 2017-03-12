@@ -31,6 +31,16 @@ int main() {
 		return 1; //return error status (initialization failed)
 	}	
 
+	int button1 = LOW;
+	int button2 = LOW;
+	int status = 0;
+
+	//status
+	//0 -> STOP (RED) 
+	//1 -> WALK (WHITE)
+	//2 -> FLASHING RED
+
+
 	pinMode(BUTTON1, INPUT);
 	pinMode(BUTTON2, INPUT);
 
@@ -42,7 +52,27 @@ int main() {
 		softPwmCreate(RED2, ON, MAX);
 		softPwmCreate(WHITE, OFF, MAX);
 
-		
+		button1 = digitalRead(BUTTON1);
+		button2 = digitalRead(BUTTON2);	
+
+		if ((button1 == LOW || button2 == LOW) && status == 0) {
+			
+			softPwmWrite(RED1, ON);
+			softPwmWrite(GREEN, ON);
+			softPwmWrite(BLUE, ON);
+			softPwmWrite(RED2, OFF);
+			softPwmWrite(WHITE, ON);
+			delay(WALK);
+		}
+
+		//temporarily set back to red for testing
+			softPwmWrite(RED1, ON);
+			softPwmWrite(GREEN, OFF);
+			softPwmWrite(BLUE, OFF);
+			softPwmWrite(RED2, ON);
+			softPwmWrite(WHITE, OFF);
+
+		delay(100);		
 
 	}	
 
