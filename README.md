@@ -1,6 +1,10 @@
 ## control-panel-sim
 Various control panel simulations built with a Raspberry Pi along with various hardware. 
 
+#Hardware Information
+![**GPIO Pin Numbering**](http://pi4j.com/images/j8header-3b-large.png)
+[More Information](http://pi4j.com/pins/model-3b-rev1.html)
+
 #Crosswalk
 C program integrated with hardware that simulates a pedestrian cross walk with LEDs and Buttons.
 
