@@ -1,6 +1,6 @@
 ## control-panel-sim
 Various control panel simulations built with a Raspberry Pi along with various hardware.  
-Current implementations are built on a Raspberry Pi 3 Model B with 1 GB of RAM and loaded with NOOBS, as well as a solderless breadboard.  
+Current implementations are built on a Raspberry Pi 3 Model B with 1 GB of RAM and loaded with NOOBS.  
 To make circuit building easier, unless otherwise stated, assume that the two positive channels and two negative channels are connected on the breadboard.   
 
 #Hardware Information
@@ -30,5 +30,12 @@ gcc -std=c99 -o crosswalk crosswalk.c -lwiringPi -lpthread
 ```
 
 **Dependencies:**  
-1. softPwm.h
-2. wiringPi.h
+* WiringPi
+
+**Installing WiringPi**
+WiringPi is a set of libraries that allow you to use the GPIO pins on your Pi to communicate with the breadboard. 
+```bash
+sudo aptitude install git-core # only necessary if you need to install git
+cd wiringPi
+./build
+```
