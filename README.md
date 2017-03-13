@@ -2,7 +2,7 @@
 Various control panel simulations built with a Raspberry Pi along with various hardware. 
 
 #Hardware Information
-![**GPIO Pin Numbering**](http://pi4j.com/images/j8header-3b-large.png)
+![**GPIO Pin Numbering**](http://pi4j.com/images/j8header-3b.png)
 [More Information](http://pi4j.com/pins/model-3b-rev1.html)
 
 #Crosswalk
