@@ -4,11 +4,13 @@ Current implementations are built on a Raspberry Pi 3 Model B with 1 GB of RAM a
 To make circuit building easier, unless otherwise stated, assume that the two positive channels and two negative channels are connected on the breadboard.   
 
 #Hardware Information
+
 ![**GPIO Pin Numbering**](http://pi4j.com/images/j8header-3b.png)  
 
 [More Information](http://pi4j.com/pins/model-3b-rev1.html)
 
 #Crosswalk
+
 C program integrated with hardware that simulates a pedestrian cross walk with LEDs and Buttons.  
 Shows both possible implementations with a RGB LED as well as separate Red and White LEDs. 
 
