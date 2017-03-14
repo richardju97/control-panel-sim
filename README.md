@@ -37,8 +37,8 @@ Pin No. | Connected Component
 3 | RGB LED - Blue
 4 | Red LED
 5 | White LED
-26 | Tactile Button #1
-27 | Tactile Button #2
+26 | Tactile Button \#1
+27 | Tactile Button \#2
 
 **Timing Information:**  
 
@@ -57,7 +57,7 @@ gcc -std=c99 -o crosswalk crosswalk.c -lwiringPi -lpthread
 **Dependencies:**  
 * WiringPi
 
-**Installing WiringPi**  
+**Installing WiringPi:**  
 WiringPi is a set of libraries that allow you to use the GPIO pins on your Pi to communicate with the breadboard. 
 ```bash
 sudo aptitude install git-core # only necessary if you need to install git
