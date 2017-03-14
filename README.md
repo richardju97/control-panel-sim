@@ -23,6 +23,17 @@ Shows both possible implementations with a RGB LED as well as separate Red and W
 Note: Remember to adjust the number of wires with different LED/Button configurations.  
 Most Male to Male wires are used for grounding and therefore do not have to be very long (in fact, shorter ones may be easier to use). 
 
+**GPIO Pin Usage/Implementation:**
+Pin No. | Connection
+------- | ----------
+0 | RGB LED - Red
+2 | RGB LED - Green
+3 | RGB LED - Blue
+4 | Red LED
+5 | White LED
+26 | Button #1
+27 | Button #2
+
 **Compiler and Execution Information:**
 ```bash
 gcc -std=c99 -o crosswalk crosswalk.c -lwiringPi -lpthread
@@ -32,7 +43,7 @@ gcc -std=c99 -o crosswalk crosswalk.c -lwiringPi -lpthread
 **Dependencies:**  
 * WiringPi
 
-**Installing WiringPi**
+**Installing WiringPi**  
 WiringPi is a set of libraries that allow you to use the GPIO pins on your Pi to communicate with the breadboard. 
 ```bash
 sudo aptitude install git-core # only necessary if you need to install git
