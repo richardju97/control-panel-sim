@@ -16,6 +16,8 @@ To make circuit building easier, unless otherwise stated, assume that the two po
 C program integrated with hardware that simulates a pedestrian cross walk with LEDs and Buttons.  
 Shows both possible implementations with a RGB LED as well as separate Red and White LEDs. 
 
+![Demo of Crosswalk](crosswalk-demo.gif)
+
 **Hardware Used:**
 * 2x Resistors
 * 1x RGB LED (interchangeable with 1 Red and 1 White LED)
